@@ -1,0 +1,21 @@
+# --- Entornos Virtuales ---
+.venv/
+venv/
+env/
+
+# --- Archivos compilados de Python ---
+__pycache__/
+*.pyc
+
+# --- Archivos del Ejecutable (PyInstaller) ---
+# No queremos subir la carpeta dist con el exe, es muy pesada
+dist/
+build/
+*.spec
+
+# --- Gráficos temporales ---
+# grafico_progreso.png
+
+# --- IDEs (Configuraciones de tu editor) ---
+.vscode/
+.idea/
