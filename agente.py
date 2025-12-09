@@ -10,10 +10,10 @@ import torch.nn.functional as F
 import matplotlib
 import matplotlib.pyplot as plt
 
-# Evitar crasheos de gráficos y usar backend sin ventana para plots
+
 matplotlib.use('Agg') 
 
-# Usar GPU si existe, sino CPU
+
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 MAX_MEMORY = 100_000
@@ -83,7 +83,7 @@ class Agent:
                 self.model.load_state_dict(torch.load('model.pth', map_location=DEVICE))
                 self.model.eval()
                 self.n_games = 150 # Empezar desde juego 150 si ya hay modelo 
-                print(">>> ¡Cerebro encontrado! Modo Experto ACTIVADO.")
+                print(">>> ¡Cerebro encontrado! ACTIVADO.")
             except Exception as e:
                 print(f">>> Error cargando: {e}. Reiniciando.")
         else:
